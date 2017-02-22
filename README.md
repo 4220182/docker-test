@@ -8,17 +8,12 @@
 datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 
 方式一：
+
 *docker-compose -f ./docker-compose.yml up -d
 
 方式二：
 
-docker swarm mode :
-
-docker stack deploy -c ./docker-compose.yml datomic-dev
-
-方式三：
-
-DYNAMODB_HOSTIP: 为容器所在的宿主IP。
+*DYNAMODB_HOSTIP: 为容器所在的宿主IP。
 *docker run -d  -p 8000:8000 hjdzyh/dynamodb-local
 *docker run -d -p 4334:4334 -e DYNAMODB_HOSTIP=$(DDB_HOST_IP):8000 dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
