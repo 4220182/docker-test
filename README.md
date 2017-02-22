@@ -1,5 +1,5 @@
 
-#Datomic 商业版
+# Datomic 商业版
 
 目前版本为：0.9.5394
 
@@ -7,11 +7,11 @@
 
 datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 
-1. 方式一：
+方式一：
 
     docker-compose -f ./docker-compose.yml up -d
 
-2. 方式二：
+方式二：
 
     DYNAMODB_HOSTIP: 为容器所在的宿主IP。
 
@@ -24,7 +24,7 @@ datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 
     docker run -it --rm -p 4334:4334 -v $(pwd)/config:/opt/datomic-pro-0.9.5394/config dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
-3. peer连接方式：
+peer连接方式：
 
     容器启动后，占用宿主主机4334、8000端口，peer可以使用以下地址连接：
 
@@ -52,5 +52,6 @@ Peer.getDatabaseNames(url2)
 
 ===> ("testdb")
 
-##发布：
+## 发布：
 正式使用的时候，请使用商业版的license key以及aws证书.
+
