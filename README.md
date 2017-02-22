@@ -20,11 +20,11 @@ datomic容器依赖后端存储dynamodb Local容器进行开发测试。
     docker run -d -p 4334:4334 -e DYNAMODB_HOSTIP=$(DDB_HOST_IP):8000 dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
 
-    #你可以使用自己的配置文件覆盖容器中默认的配置文件：
+    # 你可以使用自己的配置文件覆盖容器中默认的配置文件：
 
     docker run -it --rm -p 4334:4334 -v $(pwd)/config:/opt/datomic-pro-0.9.5394/config dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
-    #容器启动后，占用宿主主机4334、8000端口，peer可以使用以下地址连接：
+    # 容器启动后，占用宿主主机4334、8000端口，peer可以使用以下地址连接：
 
     datomic:ddb-local://localhost:8000/local-test/<数据库名称>?aws_access_key_id=test&aws_secret_key=test
 
