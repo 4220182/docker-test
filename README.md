@@ -25,6 +25,7 @@ docker run -it --rm -p 4334:4334 -v $(pwd)/config:/opt/datomic-pro-0.9.5394/conf
 容器启动后，占用宿主主机4334、8000端口，peer可以使用以下地址连接：
 
 *datomic:ddb-local://localhost:8000/local-test/<数据库名称>?aws_access_key_id=test&aws_secret_key=test
+
 *datomic:ddb-local://localhost:8000/local-test/*?aws_access_key_id=test&aws_secret_key=test
 
 zyh@local ~/d/datomic-pro-0.9.5394> ./bin/groovysh
