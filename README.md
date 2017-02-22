@@ -14,7 +14,9 @@ datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 方式二：
 
 *DYNAMODB_HOSTIP: 为容器所在的宿主IP。
+
 *docker run -d  -p 8000:8000 hjdzyh/dynamodb-local
+
 *docker run -d -p 4334:4334 -e DYNAMODB_HOSTIP=$(DDB_HOST_IP):8000 dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
 
@@ -27,6 +29,8 @@ docker run -it --rm -p 4334:4334 -v $(pwd)/config:/opt/datomic-pro-0.9.5394/conf
 *datomic:ddb-local://localhost:8000/local-test/<数据库名称>?aws_access_key_id=test&aws_secret_key=test
 
 *datomic:ddb-local://localhost:8000/local-test/*?aws_access_key_id=test&aws_secret_key=test
+
+例子：
 
 zyh@local ~/d/datomic-pro-0.9.5394> ./bin/groovysh
 Groovy Shell (1.8.9, JVM: 1.8.0_65)
