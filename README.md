@@ -7,11 +7,11 @@
 
 datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 
-方式一：
+1. 方式一：
 
     docker-compose -f ./docker-compose.yml up -d
 
-方式二：
+2. 方式二：
 
     DYNAMODB_HOSTIP: 为容器所在的宿主IP。
 
@@ -24,7 +24,7 @@ datomic容器依赖后端存储dynamodb Local容器进行开发测试。
 
     docker run -it --rm -p 4334:4334 -v $(pwd)/config:/opt/datomic-pro-0.9.5394/config dev.flybot.sg:4567/zyh/docker-datomic-dynamodb:0.9.5394
 
-peer连接方式：
+3. peer连接方式：
 
     容器启动后，占用宿主主机4334、8000端口，peer可以使用以下地址连接：
 
